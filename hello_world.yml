@@ -1,4 +1,4 @@
-- name: Hello World Sample
+- name: Hello World Samples
   hosts: all
   gather_facts: no
   tasks:
