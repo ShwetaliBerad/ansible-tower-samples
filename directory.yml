@@ -1,0 +1,13 @@
+# Uses of for loop in playbook
+---
+- hosts : test-servers
+  become : true
+  vars :
+    ansible_become_pass : root
+  tasks :
+   - name : Make 3 directories
+     command : mkdir "{{ item }}"
+     with_items:
+     - new_dir1
+     - new_dir2
+     - new_dir3
